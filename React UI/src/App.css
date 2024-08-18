@@ -1,0 +1,103 @@
+body {
+  background-color: rgb(47, 61, 85);
+  font-family: 'Montserrat', sans-serif;
+  padding: 3rem;
+  color: #f9f7d6;
+  margin: 0;
+  overflow: hidden;
+}
+
+#router-container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+#root {
+  width: 100%;
+}
+
+p, h1 {
+  margin: 0;
+}
+
+main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 1rem 0;
+}
+
+header {
+  margin-bottom: 1rem;
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+}
+
+#home-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width:75%;
+}
+
+.action-icons {
+  cursor: pointer;
+}
+
+.submit-buttons {
+  margin-top: 1rem;
+}
+
+#create-button {
+  margin-top: 2rem;
+  width: 50%;
+}
+
+#navbar-container {
+  display: flex;
+  justify-content: start;
+}
+
+.navbar-item {
+  margin-right: 1rem;
+}
+
+caption {
+  font-size: 2rem;
+  color: var(--secondary-color);
+  margin-bottom: 1rem;
+}
+
+.table-container {
+  max-height: 350px;
+  overflow-y: auto;
+}
+
+table {
+  border-collapse: collapse;
+}
+
+tr th {
+  width: 12rem;
+  text-align: start;
+  border-bottom: solid 3px var(--secondary-color);
+}
+
+tr td {
+  text-align: start;
+  padding-top: 1.25rem;
+}
+
+input, select {
+  width:100%;
+}
+
+.form-divider {
+  margin-top: 1rem;
+}
