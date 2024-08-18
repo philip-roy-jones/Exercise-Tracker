@@ -29,14 +29,14 @@
             <pre><code>git clone https://github.com/your-username/your-repository.git</code></pre>
         </li>
         <li>Navigate to the React UI directory and install dependencies:
-            <pre><code>cd your-repository/react-ui
+            <pre><code>cd your-repository/"React UI"
 npm install</code></pre>
         </li>
         <li>Navigate to the REST API directory and install dependencies:
-            <pre><code>cd ../rest-api
+            <pre><code>cd ../"REST API"
 npm install</code></pre>
         </li>
-        <li>Create a <code>.env</code> file in the <code>rest-api</code> directory with the following variables:
+        <li>Create a <code>.env</code> file in the <code>"REST API"</code> directory with the following variables:
             <pre><code>PORT=3000
 MONGODB_CONNECT_STRING=mongodb://localhost:27017/your-database</code></pre>
         </li>
@@ -44,7 +44,7 @@ MONGODB_CONNECT_STRING=mongodb://localhost:27017/your-database</code></pre>
             <pre><code>npm start</code></pre>
         </li>
         <li>Start the React UI development server:
-            <pre><code>cd ../react-ui
+            <pre><code>cd ../"React UI"
 npm run dev</code></pre>
         </li>
     </ol>
