@@ -56,5 +56,8 @@ npm run dev</code></pre>
     <ul>
       <li>Special thanks to Professor Naumann for their guidance and support throughout the course and project.</li>
     </ul>
+    <h2>Project Outcome</h2>
+    <p><strong>Score Received:</strong> 100/100</p>
+
 </body>
 </html>
