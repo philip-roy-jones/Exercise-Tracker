@@ -4,7 +4,7 @@ import {connect} from './models/exerciseModel.js';
 
 dotenv.config();
 
-const PORT = process.env.PORT;
+const PORT = process.env.PORT || 5000;
 const MONGODB_CONNECT_STRING = process.env.MONGODB_CONNECT_STRING;
 const app = express();
 
