@@ -7,7 +7,7 @@ export default defineConfig({
   server: {
     proxy: {
       '/exercises': {
-        target: 'http://localhost:3000'
+        target: 'https://exercise-tracker-backend-5nzw.onrender.com'
       }
     }
   }
