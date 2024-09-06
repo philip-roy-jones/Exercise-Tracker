@@ -1,5 +1,5 @@
 import { useNavigate } from "react-router-dom";
-import Form from "../components/form";
+import Form from "../components/Form";
 import { useState } from "react";
 
 function CreatePage({exercises, setExercises}) {
