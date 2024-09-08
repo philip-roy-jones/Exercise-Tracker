@@ -5,12 +5,13 @@ import Navigation from './components/Navigation.jsx'
 import HomePage from './pages/HomePage.jsx'
 import CreatePage from './pages/CreatePage.jsx'
 import EditPage from './pages/EditPage.jsx'
+import { API_BASE_URL } from './config.js'
 
 function App() {
   const [exercises, setExercises] = useState([]);
 
   const loadExercises = async () => {
-    const response = await fetch('/exercises')
+    const response = await fetch(`${API_BASE_URL}/exercises`)
     const data = await response.json()
 
     setExercises(data)

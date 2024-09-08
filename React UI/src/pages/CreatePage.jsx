@@ -1,6 +1,7 @@
 import { useNavigate } from "react-router-dom";
 import Form from "../components/Form";
 import { useState } from "react";
+import { API_BASE_URL } from "../config";
 
 function CreatePage({exercises, setExercises}) {
     const navigate = useNavigate();
@@ -23,7 +24,7 @@ function CreatePage({exercises, setExercises}) {
     const handleFormSubmit = async (event) => {
         event.preventDefault()
 
-        const response = await fetch('/exercises',{
+        const response = await fetch(`${API_BASE_URL}/exercises`,{
             method:'POST',
             headers: {
                 'Content-Type': 'application/json'
@@ -33,7 +34,7 @@ function CreatePage({exercises, setExercises}) {
 
         if (response.ok) {
             alert("Successfully Created!")
-            const updatedResponse = await fetch('/exercises');
+            const updatedResponse = await fetch(`${API_BASE_URL}/exercises`);
             const updatedExercises = await updatedResponse.json();
             setExercises(updatedExercises);
             navigate('/')

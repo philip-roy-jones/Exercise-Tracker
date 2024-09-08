@@ -1,13 +1,26 @@
 import express from 'express';
 import dotenv from 'dotenv';
 import {connect} from './models/exerciseModel.js';
+import cors from 'cors';
 
 dotenv.config();
 
 const PORT = process.env.PORT || 5000;
 const MONGODB_CONNECT_STRING = process.env.MONGODB_CONNECT_STRING;
+const allowedOrigins = process.env.CORS_ALLOWED_ORIGINS.split(',');
 const app = express();
 
+app.use(cors({
+    origin: (origin, callback) => {
+        if (allowedOrigins.includes(origin) || !origin) {
+          callback(null, true);
+        } else {
+          callback(new Error('Not allowed by CORS'));
+        }
+      },
+    methods: 'GET,POST,PUT,DELETE',
+    allowedHeaders: 'Content-Type,Authorization'
+  }));
 app.use(express.json());
 app.use(express.urlencoded({extended: true}));
 

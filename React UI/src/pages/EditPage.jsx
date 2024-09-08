@@ -1,6 +1,7 @@
 import { useLocation, useNavigate } from "react-router-dom";
 import { useState } from "react";
 import Form from "../components/Form";
+import { API_BASE_URL } from "../config";
 
 function EditPage({exercises, setExercises}) {
     const navigate = useNavigate();
@@ -26,7 +27,7 @@ function EditPage({exercises, setExercises}) {
     const handleFormSubmit = async (event) => {
         event.preventDefault();
 
-        const response = await fetch(`/exercises/${id}`,{
+        const response = await fetch(`${API_BASE_URL}/exercises/${id}`,{
             method:"PUT",
             headers: {
                 'Content-Type': 'application/json'

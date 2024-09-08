@@ -1,6 +1,7 @@
 import { MdDeleteForever } from "react-icons/md";
 import { FaEdit } from "react-icons/fa";
 import { useNavigate } from "react-router-dom";
+import { API_BASE_URL } from "../config";
 
 function ExerciseRow({name, reps, weight, unit, date, id, exercises , setExercises}) {
     const navigate = useNavigate()
@@ -20,7 +21,7 @@ function ExerciseRow({name, reps, weight, unit, date, id, exercises , setExercis
 
     async function handleDeleteClick() {
         try {
-            const response = await fetch(`/exercises/${id}`, {method:'DELETE'})
+            const response = await fetch(`${API_BASE_URL}/exercises/${id}`, {method:'DELETE'})
 
             if (!response.ok) {
                 throw new Error('Failed to delete exercise');
