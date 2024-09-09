@@ -9,7 +9,7 @@ import { API_BASE_URL } from './config.js'
 
 function App() {
   const [exercises, setExercises] = useState([]);
-
+  console.log(API_BASE_URL);
   const loadExercises = async () => {
     const response = await fetch(`${API_BASE_URL}/exercises`)
     const data = await response.json()
