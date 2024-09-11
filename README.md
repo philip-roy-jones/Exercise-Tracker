@@ -9,7 +9,12 @@
     <p>This project is the final assignment for CS 290: Web Development and demonstrates the use of various technologies to build a comprehensive web application.</p>
     <h2>Live Demo</h2>
     <p><strong><a href="https://exercise-tracker-philip.vercel.app/" target="_blank">Try the Live Demo!</a></strong></p>
-    <p><em>Exercise are not user-specific, as account mapping was outside the project scope.</em></p>
+    <p>
+      <em>Exercises are not user-specific, as account mapping was outside the project scope.</em>
+    </p>
+    <p>
+      <em>Additionally, the application may take a couple of seconds to load initially due to Render's inactivity policy, which causes the backend to go to sleep and requires a brief warm-up time.</em>
+    </p>
     <h2>Technologies Used</h2>
     <ul>
         <li>MongoDB</li>
